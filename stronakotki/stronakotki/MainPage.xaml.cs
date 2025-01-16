@@ -7,7 +7,6 @@ namespace stronakotki
 {
     public partial class MainPage : ContentPage
     {
-        private ObservableCollection<Kotki> collection;
         ObservableCollection<Kotki> koteczek = new ObservableCollection<Kotki>();
         public void GetKotki()
         {
@@ -41,7 +40,6 @@ namespace stronakotki
         {
             InitializeComponent();
             GetKotki();
-            collection = new ObservableCollection<Kotki>();
             collectionView.ItemsSource = koteczek;
         }
         private void Entry_Unfocused(object sender, FocusEventArgs e)
